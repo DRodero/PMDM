@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Botones y Listas</string>
+    <string name="saludo">Hola, ¿cómo estás?</string>
+
+    <array name="tecnologias">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Python</item>
+    </array>
+
+</resources>
