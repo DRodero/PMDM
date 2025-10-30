@@ -1,0 +1,117 @@
+/* ====================================
+   ESTILOS PARA JUEGO DE HALLOWEEN
+   Atrapa Calabazas - 2º DAM
+   ==================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1a0033, #330066);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(to bottom, #0d0033, #1a0055);
+    border: 4px solid #ff6600;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
+}
+
+#gameInfo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#player {
+    position: absolute;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: left 0.1s linear;
+}
+
+.falling-object {
+    position: absolute;
+    font-size: 40px;
+    user-select: none;
+    cursor: default;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    z-index: 200;
+    border: 3px solid #ff6600;
+}
+
+#gameOver h2 {
+    color: #ff6600;
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#gameOver p {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#restartBtn {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#restartBtn:hover {
+    background: #ff8800;
+    transform: scale(1.05);
+}
+
+#instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.7;
+    z-index: 100;
+}
